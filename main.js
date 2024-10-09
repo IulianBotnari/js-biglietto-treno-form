@@ -1,16 +1,26 @@
 //mistone1
 
 
-let biletPrice = document.getElementById("biletPrice").innerHTML
+let calcButton = document.getElementById("calc")
 
-let priceBilet = calcBiletPrice()
-console.log(priceBilet);
+calcButton.addEventListener("click", calcBiletPrice)
+
 
 function calcBiletPrice() {
 
-    let passengerAge = 17//Number(prompt("Inserisci età del passegero"))
+    let passengerAge = document.getElementById("passengerAge")
 
-    let distanceKm = 10//Number(prompt("Inserisci età del passegero"))
+    let ageValue = passengerAge.value
+
+    console.log(ageValue);
+    
+    
+    let distanceKm = document.getElementById("distanceKm")
+    let distanceKmValue = distanceKm.value
+
+    console.log(distanceKmValue);
+    
+
     
     let priceForKm = 0.21
     
@@ -18,17 +28,18 @@ function calcBiletPrice() {
     
     let disconut40 = 0.40
 
-    let clacPrice = (distanceKm * priceForKm)
+    let clacPrice = (distanceKmValue * priceForKm)
 
-    if (passengerAge < 18) {
+    if (ageValue === "Minorenne") {
 
         clacPrice = clacPrice - (clacPrice * disconut20)
-        return clacPrice.toFixed(2)
-    }else if (passengerAge > 65) {
+        return document.getElementById("costBilet").innerHTML = clacPrice.toFixed(2)
+    }else if (ageValue === "Anziano") {
         clacPrice = clacPrice - (clacPrice * disconut40)
-        return clacPrice.toFixed(2)
+        return document.getElementById("costBilet").innerHTML = clacPrice.toFixed(2)
     } else {
-        return clacPrice.toFixed(2)
+        return document.getElementById("costBilet").innerHTML = clacPrice.toFixed(2)
     }
 
 }
+

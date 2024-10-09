@@ -12,28 +12,28 @@
         <div class="card">
             <div class="row">
                 <div class="col_4">
-                    <label for="">Nome e Cognome</label>
-                    <input type="text">
+                    <label for="nome_cognome">Nome e Cognome</label>
+                    <input id="nome_cognome" type="text" placeholder="Inserisci Nome e Cognomi" name="nome_cognome">
                 </div>
                 
                 <div class="col_4">
-                    <label for="">Nome e Cognome</label>
-                    <input type="text">
+                    <label for="distanceKm">KM da percorrere</label>
+                    <input id="distanceKm" type="text" placeholder="Inserisci KM" name="distanceKm">
                 </div>
                 
                 <div class="col_4">
-                <label for="Fascai d'età">Fascia d'età</label>
-                <select name="" id="">
-                    <option value="">Minorenne</option>
-                    <option value="">Sfortunato</option>
-                    <option value="">Anziano</option>
+                <label for="passengerAge">Fascia d'età</label>
+                <select name="passengerAge" id="passengerAge">
+                    <option value="Minorenne">Minorenne</option>
+                    <option value="Sfortunato">Sfortunato</option>
+                    <option value="Anziano">Anziano</option>
                 </select>
 
                 </div>
             </div>
 
             <div class="pulsanti">
-                <button type="submit">Genera</button>
+                <button id="calc" type="submit">Genera</button>
                 <button>Annulla</button>
             </div>
         </div>
@@ -43,29 +43,29 @@
             <h2>DETTAGLIO PASSEGERI</h2>
             <div class="row2">
                 <div class="col_4">
-                    <div>
-                        <h2>NOME PASSEGERO</h2>
+                    <div class="passenger_details">
+                        <h3>NOME PASSEGERO</h3>
                         <span>Joe Snow</span>
                     </div>
                 </div>
                 
                 <div class="col_8">
-                    <div>
-                        <div>Offerta</div>
+                    <div class="container_tag">
+                        <div class="bilet_tag">Offerta</div>
                         <p></p>
                         
                     </div>
-                    <div>
-                        <div>Carrozza</div>
+                    <div class="container_tag">
+                        <div class="bilet_tag">Carrozza</div>
                         <p></p>
                     </div>
-                    <div>
-                        <div>Codice CP</div>
+                    <div class="container_tag">
+                        <div class="bilet_tag">Codice CP</div>
                         <p></p>
                     </div>
-                    <div>
-                        <div>Costo biglietto</div>
-                        <p></p>
+                    <div class="container_tag">
+                        <div class="bilet_tag">Costo biglietto</div>
+                        <p id="costBilet"></p>
                     </div>
                 </div>
             </div>
