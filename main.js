@@ -8,7 +8,7 @@ console.log(priceBilet);
 
 function calcBiletPrice() {
 
-    let passengerAge = 10//Number(prompt("Inserisci età del passegero"))
+    let passengerAge = 17//Number(prompt("Inserisci età del passegero"))
 
     let distanceKm = 10//Number(prompt("Inserisci età del passegero"))
     
@@ -20,7 +20,18 @@ function calcBiletPrice() {
 
     let clacPrice = (distanceKm * priceForKm)
 
-    return clacPrice
+    if (passengerAge < 18) {
+
+        clacPrice = clacPrice - (clacPrice * disconut20)
+        return clacPrice.toFixed(2)
+    }else if (passengerAge > 65) {
+        clacPrice = clacPrice - (clacPrice * disconut40)
+        return clacPrice.toFixed(2)
+    } else {
+        return clacPrice.toFixed(2)
+    }
+
+    
     
     
 }
