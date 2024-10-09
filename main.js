@@ -31,7 +31,4 @@ function calcBiletPrice() {
         return clacPrice.toFixed(2)
     }
 
-    
-    
-    
 }
