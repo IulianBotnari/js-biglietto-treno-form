@@ -11,3 +11,6 @@ let disconut20 = 0.20
 let disconut40 = 0.40
 
 console.log(passengerAge, distanceKm, priceForKm, disconut20, disconut40);
+
+let biletPrice = document.getElementById("biletPrice").innerHTML
+
