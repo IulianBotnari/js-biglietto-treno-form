@@ -1,12 +1,39 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Afacad Flux", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0;
+
 }
 
 
+/* #region text_input and button*/
+.text_input,
+select {
+    border-radius: 10px;
+    font-size: 15px;
+    padding: .3rem;
+    border: 4px solid pink;
+}
 
-.container{
+button {
+    background-color: rgb(184, 124, 75);
+    color: pink;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: .3rem;
+    border: 4px solid pink;
+}
+
+/* #endregion text_input and button */
+
+.container {
     width: 80%;
     height: 800px;
     margin: auto;
@@ -15,7 +42,7 @@
     justify-content: center;
 }
 
-.title{
+.title {
     font-size: 50px;
     font-weight: bolder;
     color: white;
@@ -24,20 +51,27 @@
 }
 
 
-.card{
+.card {
     background-color: white;
     display: flex;
     align-items: center;
     flex-direction: column;
     border-radius: 20px;
     margin: 40px 0px;
+    padding: 1rem;
+    box-shadow: .2rem 0.2rem 12px;
 }
 
-.card2{
+label{
+    font-size: 15px;
+    margin-bottom: 1rem;
+}
+
+.card2 {
     background-color: white;
     display: flex;
     flex-direction: column;
-
+    box-shadow: .2rem 0.2rem 12px;
     border-radius: 20px;
     margin: 40px 0px;
     padding: 15PX;
@@ -45,27 +79,30 @@
 }
 
 
-.row{
+.row {
     display: flex;
     justify-content: center;
     width: 75%;
-    
+
 
 
 }
 
 
-.row2{
+.row2 {
     display: flex;
     width: 100%;
-    
+    height: 150px;
+    border-top: 4px solid gray;
+    border-bottom: 4px solid gray;
 
-    
+
+
 
 
 }
 
-.col_4{
+.col_4 {
     width: calc(100 / 12 * 4);
     display: flex;
     flex-direction: column;
@@ -73,32 +110,56 @@
     padding-right: 10px;
 }
 
-.col_8{
+.col_8 {
     width: calc(100 / 12 * 8);
     display: flex;
     padding-left: 10px;
+    height: 100%;
+    
 }
 
-.pulsanti{
+.pulsanti {
     margin: 20px;
 }
 
 
-.bilet_tag{
+.bilet_tag {
     font-size: 20px;
     font-weight: bold;
+    padding-top: 20px;
 
 }
 
-h2{
-    
+h2 {}
+
+.container_tag {
+    margin: 0 50px;
+
+}
+
+.passenger_details {
+    background-color: gray;
+    padding-top: 20px;
+
+}
+
+
+.passenger_details{
+
+    height: 100%;
+
 }
 
 .container_tag{
-    margin: 0 5px;
+    position: relative;
 }
 
-.passenger_details{
-    background-color: gray;
-
+#costBilet, #b_cod, #carrozza, #bilet_type{
+position: absolute;
+top: 60%;
 }
+
+span{
+    font-size: 18px;
+}
+

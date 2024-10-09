@@ -26,8 +26,6 @@ function calcBiletPrice() {
 
     console.log(distanceKmValue);
     
-
-    
     let priceForKm = 0.21
     
     let disconut20 = 0.20
@@ -47,15 +45,16 @@ function calcBiletPrice() {
         document.getElementById("costBilet").innerHTML = clacPrice.toFixed(2)
     }else if (ageValue === "Anziano") {
         clacPrice = clacPrice - (clacPrice * disconut40)
+        document.getElementById("carrozza").innerHTML = carrozza
+        document.getElementById("b_cod").innerHTML = b_cod
         document.getElementById("bilet_type").innerHTML = "Biglietto ridotto 40%"
         document.getElementById("costBilet").innerHTML = clacPrice.toFixed(2)
     } else {
+        document.getElementById("carrozza").innerHTML = carrozza
+        document.getElementById("b_cod").innerHTML = b_cod
         document.getElementById("bilet_type").innerHTML = "Biglietto Standard"
         document.getElementById("costBilet").innerHTML = clacPrice.toFixed(2)
     }
-
-
-    
 
 }
 
